@@ -11,18 +11,22 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-      <button type="submit">Search</button>
-    </form>
-    <div class="gallery">
-      
-    </div>
-
+    <section class="container">
+      <form class="search-form" id="search-form">
+          <div class="search-form__box">
+            <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
+            <button type="submit">Search</button>
+          </div>
+          <div class="gallery">
+          
+          </div>
+      </form>
+    
     <button type="button" class="load-more">Load more</button>
+    </section>
     <!-- <include src="./partials/example.html"></include> -->
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
