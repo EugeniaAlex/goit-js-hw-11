@@ -24,6 +24,7 @@ function onCardSearch(event) {
     dataApiService.query = event.currentTarget.elements.query.value;
     dataApiService.resetPage();
     dataApiService.fetchCards().then(makeGalaryMarkup);
+    event.currentTarget.elements.query.value = "";
 
 };
  
