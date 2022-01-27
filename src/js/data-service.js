@@ -26,7 +26,9 @@ export default class DataApiService {
         
         const startSearch = await axios(options);
         this.page += 1;
-        return startSearch.data.hits;
+        const hits = startSearch.data.hits;
+        const totalHits = startSearch.data.totalHits;
+        return {hits, totalHits};
     }
 
     
@@ -41,5 +43,13 @@ export default class DataApiService {
 
     set query(newQueryValue) {
         this.queryValue = newQueryValue;
+    }
+
+    get queryPage() {
+        return this.page; 
+    }
+
+    set queryPage(newPage) {
+        this.page = newPage;
     }
 }

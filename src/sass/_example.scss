@@ -56,7 +56,6 @@ button {
   height: 50px;
 
   display: flex;
-  // display: block;
   // margin-left: auto;
   // margin-right: auto;
   justify-content: center;
@@ -68,6 +67,16 @@ button {
   outline: none;
   border: none;
   margin-left: 12px;
+}
+
+button .is-hidden {
+  display: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .load-more {
@@ -98,14 +107,22 @@ b span {
 }
 
 .gallery .photo-card {
+  display: block;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 
-  display: block;
   max-width: 100%;
+}
+
+.gallery__item {
+  text-decoration: none;
 }
 
 .gallery__image {
   border-radius: 4px;
+}
+
+.total-hits {
+  text-align: center;
 }
